@@ -1,0 +1,13 @@
+﻿  vboindexer.cpp
+  texture.cpp
+  text2D.cpp
+  tangentspace.cpp
+  shader.cpp
+  quaternion_utils.cpp
+f:\terrain\framework\framework\quaternion_utils.cpp : warning C4819: The file contains a character that cannot be represented in the current code page (936). Save the file in Unicode format to prevent data loss
+  objloader.cpp
+  main.cpp
+  controls.cpp
+  Generating Code...
+  Framework.vcxproj -> F:\terrain\Framework\Debug\Framework.exe
+  Framework.vcxproj -> F:\terrain\Framework\Debug\Framework.pdb (Partial PDB)
