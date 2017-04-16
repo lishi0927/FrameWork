@@ -121,7 +121,9 @@
     <ClCompile Include="objloader.cpp" />
     <ClCompile Include="quaternion_utils.cpp" />
     <ClCompile Include="shader.cpp" />
+    <ClCompile Include="specular_1.cpp" />
     <ClCompile Include="tangentspace.cpp" />
+    <ClCompile Include="terrain.cpp" />
     <ClCompile Include="text2D.cpp" />
     <ClCompile Include="texture.cpp" />
     <ClCompile Include="vboindexer.cpp" />
@@ -129,6 +131,11 @@
   <ItemGroup>
     <ClInclude Include="controls.hpp" />
     <ClInclude Include="ground.h" />
+    <ClInclude Include="light.h" />
+    <ClInclude Include="shaderuniform.h" />
+    <ClInclude Include="shading.h" />
+    <ClInclude Include="specular_1.h" />
+    <ClInclude Include="terrain.h" />
     <ClInclude Include="objloader.hpp" />
     <ClInclude Include="quaternion_utils.hpp" />
     <ClInclude Include="shader.hpp" />

@@ -42,6 +42,12 @@
     <ClCompile Include="vboindexer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="terrain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="specular_1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controls.hpp">
@@ -72,6 +78,21 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vboindexer.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="terrain.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shading.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shaderuniform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="specular_1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="light.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
