@@ -3,15 +3,7 @@
 
 #include <gl/glew.h>
 #include <glm/glm.hpp>
-
-struct DirectionalLight
-{
-	glm::vec3 Color;
-	float AmbientIntensity;
-	glm::vec3 Direction;
-	float DiffuseIntensity;
-};
-
+#include "light.h"
 
 struct SpecularShaderUniform {
 	GLuint shader;
@@ -103,14 +95,5 @@ struct SpecularShaderUniform {
 	}
 }SpecularShader;
 
-DirectionalLight m_directionalLight;
-
-void LightInit()
-{
-	m_directionalLight.Color = glm::vec3(1.0f, 1.0f, 1.0f);
-	m_directionalLight.AmbientIntensity = 0.0f;
-	m_directionalLight.DiffuseIntensity = 0.2f;
-	m_directionalLight.Direction = glm::vec3(0.0f, 0.0, 1.0);
-}
 
 #endif

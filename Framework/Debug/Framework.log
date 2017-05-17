@@ -1,2 +1,8 @@
-﻿  Framework.vcxproj -> F:\terrain\Framework\Debug\Framework.exe
+﻿  pTex.cpp
+f:\terrain\framework\framework\ptex.cpp(16): warning C4018: '<': signed/unsigned mismatch
+f:\terrain\framework\framework\ptex.cpp(88): warning C4018: '<': signed/unsigned mismatch
+f:\terrain\framework\framework\ptex.cpp(126): warning C4018: '<': signed/unsigned mismatch
+f:\terrain\framework\framework\ptex.cpp(201): warning C4101: 'height': unreferenced local variable
+f:\terrain\framework\framework\ptex.cpp(201): warning C4101: 'width': unreferenced local variable
+  Framework.vcxproj -> F:\terrain\Framework\Debug\Framework.exe
   Framework.vcxproj -> F:\terrain\Framework\Debug\Framework.pdb (Partial PDB)

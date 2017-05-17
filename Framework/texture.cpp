@@ -245,3 +245,10 @@ void Texture::Bind(GLenum TextureUnit)
 	glBindTexture(m_textureTarget, m_textureObj);
 }
 
+
+void SaveImage(float* data, int width, int height, const char* filename)
+{
+	Magick::Image image((size_t)width, (size_t)height, "R", Magick::FloatPixel, data);
+	//image.flip();
+	image.write(filename);
+}

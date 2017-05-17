@@ -74,12 +74,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>F:\terrain\Framework\Framework\external\glew-1.13.0\include;F:\terrain\Framework\Framework\external\glfw-3.1.2\include\GLFW;F:\terrain\Framework\Framework\external\glm-0.9.7.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\soft\opencv11\opencv\build\include;F:\terrain\Framework\Framework\external;F:\terrain\Framework\Framework\external\glew-1.13.0\include;F:\terrain\Framework\Framework\external\glfw-3.1.2\include\GLFW;F:\terrain\Framework\Framework\external\glm-0.9.7.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/D _CRT_SECURE_NO_WARNINGS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>F:\terrain\Framework\Framework\external\glew-1.13.0\lib;F:\terrain\Framework\Framework\external\glfw-3.1.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>glfw3.lib;glew32.lib;glew32s.lib;glu32.lib;opengl32.lib;CORE_DB_Magick++_.lib;CORE_RL_Magick++_.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\soft\opencv11\opencv\build\x86\vc11\lib;F:\terrain\Framework\Framework\external\SOIL;F:\terrain\Framework\Framework\external\glew-1.13.0\lib;F:\terrain\Framework\Framework\external\glfw-3.1.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_highgui2411d.lib;opencv_imgproc2411d.lib;opencv_core2411d.lib;SOIL.lib;glfw3.lib;glew32.lib;glew32s.lib;glu32.lib;opengl32.lib;CORE_DB_Magick++_.lib;CORE_RL_Magick++_.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -117,33 +117,85 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="controls.cpp" />
+    <ClCompile Include="ddsloader.cpp" />
+    <ClCompile Include="dds_reader.cpp" />
+    <ClCompile Include="framebuffer.cpp" />
+    <ClCompile Include="ImageCompare.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="objloader.cpp" />
+    <ClCompile Include="Page.cpp" />
+    <ClCompile Include="pTex.cpp" />
     <ClCompile Include="quaternion_utils.cpp" />
+    <ClCompile Include="sat.cpp" />
     <ClCompile Include="shader.cpp" />
-    <ClCompile Include="specular_1.cpp" />
+    <ClCompile Include="shadercooktorrance.cpp" />
+    <ClCompile Include="shadernull.cpp" />
+    <ClCompile Include="shaderphong.cpp" />
+    <ClCompile Include="shadershadow.cpp" />
+    <ClCompile Include="shaderspecular.cpp" />
+    <ClCompile Include="shadowmap.cpp" />
     <ClCompile Include="tangentspace.cpp" />
     <ClCompile Include="terrain.cpp" />
+    <ClCompile Include="terrainData.cpp" />
     <ClCompile Include="text2D.cpp" />
     <ClCompile Include="texture.cpp" />
+    <ClCompile Include="util.cpp" />
     <ClCompile Include="vboindexer.cpp" />
+    <ClCompile Include="vTex.cpp" />
+    <ClCompile Include="VTshader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="controls.hpp" />
+    <ClInclude Include="ddsloader.h" />
+    <ClInclude Include="dds_reader.h" />
+    <ClInclude Include="framebuffer.h" />
     <ClInclude Include="ground.h" />
+    <ClInclude Include="ImageCompare.h" />
     <ClInclude Include="light.h" />
+    <ClInclude Include="page.h" />
+    <ClInclude Include="pTex.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="sat.h" />
+    <ClInclude Include="shadercooktorrance.h" />
+    <ClInclude Include="shadernull.h" />
+    <ClInclude Include="shaderphong.h" />
+    <ClInclude Include="shadershadow.h" />
     <ClInclude Include="shaderuniform.h" />
     <ClInclude Include="shading.h" />
-    <ClInclude Include="specular_1.h" />
+    <ClInclude Include="shaderspecular.h" />
+    <ClInclude Include="shadowmap.h" />
     <ClInclude Include="terrain.h" />
     <ClInclude Include="objloader.hpp" />
     <ClInclude Include="quaternion_utils.hpp" />
     <ClInclude Include="shader.hpp" />
     <ClInclude Include="specularlight.h" />
     <ClInclude Include="tangentspace.hpp" />
+    <ClInclude Include="terrainData.h" />
     <ClInclude Include="text2D.hpp" />
     <ClInclude Include="texture.hpp" />
+    <ClInclude Include="util.h" />
     <ClInclude Include="vboindexer.hpp" />
+    <ClInclude Include="VTex.h" />
+    <ClInclude Include="VTshader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\cooktorrance_fragment.glsl" />
+    <None Include="shader\cooktorrance_vert.glsl" />
+    <None Include="shader\null_fragment.glsl" />
+    <None Include="shader\null_vert.glsl" />
+    <None Include="shader\phong_fragment.glsl" />
+    <None Include="shader\phong_vert.glsl" />
+    <None Include="shader\screen_fragment.glsl" />
+    <None Include="shader\screen_vert.glsl" />
+    <None Include="shader\shadow_fragment.glsl" />
+    <None Include="shader\shadow_vert.glsl" />
+    <None Include="shader\specular_fragment.glsl" />
+    <None Include="shader\specular_vert.glsl" />
+    <None Include="shader\vt_fragment.glsl" />
+    <None Include="shader\vt_vert.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Framework.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

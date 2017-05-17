@@ -34,5 +34,7 @@ private:
 	Magick::Blob m_blob;
 };
 
+void SaveImage(float*data, int width, int height, const char* filename);
+
 
 #endif

@@ -9,6 +9,12 @@ public:
 		heightmap = 0;
 	}
 
+	ShadingLOD(int tbrdf, int theightmap)
+	{
+		BRDF = tbrdf;
+		heightmap = theightmap;
+	}
+
 	int BRDF;
 	int heightmap;
 };
